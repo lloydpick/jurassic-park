@@ -3,11 +3,11 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
+# SETTINGS
 set :haml, :format => :html5
 
-get '/' do
-  haml :index
-end
+# MAIN PAGE
+get '/' do haml :index end
 
 # TABS
 get '/tab1' do haml :tab1 end
