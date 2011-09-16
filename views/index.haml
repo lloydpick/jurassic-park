@@ -1,0 +1,51 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title JP
+    %link{:href => "css/stylesheet.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/map.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-ui-1.8.16.custom.min.js", :type => "text/javascript"}
+    %script{:src => "js/javascript.js", :type => "text/javascript"}
+  %body
+    #outer
+      #inner
+        #map
+          #map-contents
+            %img#mongo1.db{:src => "img/database.png"}
+            %img#mongo2.db{:src => "img/database.png"}
+            %img#mongo3.db{:src => "img/database.png"}
+            %img#web1.server{:src => "img/server.png"}
+          #status-bars.green
+            #status-bar-top SYSTEMS ONLINE
+            #status-bar-left SYSTEMS ONLINE
+            #status-bar-right SYSTEMS ONLINE
+            #status-bar-bottom SYSTEMS ONLINE
+        #info.ok
+          #tabs
+            %ul
+              %li
+                %a{:href => "tab1.html", :title => "tab-container"} Nunc tincidunt
+              %li
+                %a{:href => "tab2.html", :title => "tab-container"} Proin dolor
+              %li
+                %a{:href => "tab3.html", :title => "tab-container"} Aenean lacinia
+            #tab-container.tab
+          #countdown
+            Refreshing in 30seconds
+          .alerts
+            .alert
+              .status.critical CRIT
+              .message resque-01 is DOWN
+            .alert
+              .status.warning WARN
+              .message
+                mongo-db-01 replication lag is 54seconds
+                %br
+                omg why don't you fix it already
+            .alert
+              .status.warning WARN
+              .message mongo-db-02 replication lag is 192seconds
+            .alert
+              .status.known ACKN
+              .message web-01 is at 90% load
