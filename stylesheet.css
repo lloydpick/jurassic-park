@@ -1,0 +1,228 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #808080;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+div#outer {
+  background: grey;
+  margin: 10px;
+  border-style: groove;
+  border-width: medium;
+  border-color: #C0C0C0;
+}
+
+div#inner {
+  background: grey;
+  margin: 10px;
+  border-style: groove;
+  border-width: medium;
+  border-color: #C0C0C0;
+}
+
+div#map {
+  height: 100%;
+  background-image: url('grid.png');
+  border-right-style: groove;
+  border-right-width: medium;
+  border-color: #C0C0C0;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+div#info {
+  height: 100%;
+  float: left;
+  width: 200px;
+}
+
+div#info div#countdown {
+  margin: 10px;
+  background: #A0A0A0;
+  height: 30px;
+  color: #707070;
+  border-style: groove;
+  border-color: #606060;
+  text-align: center;
+  padding-top: 10px;
+}
+
+div#info div.alerts.critical {
+  background: #E00000;
+}
+
+div#info div.alerts.warning {
+  background: yellow;
+}
+
+div#info div.alerts.known {
+  background: blue;
+  color: white;
+}
+
+div#info div.alerts {
+  background: white;
+  margin: 10px;
+  padding: 10px;
+  border-style: groove;
+  border-width: medium;
+  border-color: #C0C0C0;
+}
+
+div#info div.alerts div.alert {
+  clear: left;
+}
+
+div#info div.alerts div.alert div.status {
+  color: white;
+  width: 60px;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  font-style: italic;
+}
+
+div#info div.alerts div.alert div.critical {
+  background: #E00000;
+}
+
+div#info div.alerts div.alert div.warning {
+  background: yellow;
+  color: black;
+}
+
+div#info div.alerts div.alert div.known {
+  background: blue;
+}
+
+div#info div.alerts div.alert div.message {
+  color: black;
+  text-align: left;
+  float: left;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+
+div#map div#map-contents {
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+div#map div#map-contents img.db {
+  height: 64px;
+  display: block;
+  width: 64px;
+  position: absolute;
+}
+
+div#map div#map-contents img.server {
+  height: 76px;
+  display: block;
+  width: 64px;
+  position: absolute;
+}
+
+div#map div#status-bars {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 20px solid #44C658;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Arial;
+}
+
+div#map div#status-bars div#status-bar-top {
+  position: absolute;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 36px;
+  width: 60%;
+}
+
+div#map div#status-bars div#status-bar-left {
+  position: absolute;
+  font-size: 48px;
+  width: 100%;
+  -moz-transform: rotate(90deg); 
+  text-align: center;
+  top: 50%;
+  z-index: 20;
+}
+
+div#map div#status-bars div#status-bar-right {
+  position: absolute;
+  right: 0;
+  font-size: 48px;
+  text-align: center;
+  -moz-transform: rotate(-90deg); 
+  top: 50%;
+  z-index: 20;
+}
+
+div#map div#status-bars div#status-bar-bottom {
+  position: absolute;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 36px;
+  width: 60%;
+  bottom: 0;
+}
+
+div#map div#status-bars.green {
+  border-color: #44C658;
+}
+
+div#map div#status-bars.red {
+  border-color: #E00000;
+}
+
+div#map div#status-bars.red div#status-bar-top {
+  background: #E00000;
+}
+
+div#map div#status-bars.red div#status-bar-left {
+  background: #E00000;
+}
+
+div#map div#status-bars.red div#status-bar-right {
+  background: #E00000;
+}
+
+div#map div#status-bars.red div#status-bar-bottom {
+  background: #E00000;
+}
+
+div#map div#status-bars.green > div#status-bar-top {
+  background: #44C658;
+}
+
+div#map div#status-bars.green > div#status-bar-left {
+  background: #44C658;
+}
+
+div#map div#status-bars.green > div#status-bar-right {
+  background: #44C658;
+}
+
+div#map div#status-bars.green > div#status-bar-bottom {
+  background: #44C658;
+}

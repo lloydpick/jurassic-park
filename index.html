@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>JP</title>
+    <link href="stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="map.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='javascript.js'></script>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="inner">
+        <div id="map">
+          <div id="map-contents">
+            <img id="mongo1" class="db" src='database.png' />
+            <img id="mongo2" class="db" src='database.png' />
+            <img id="mongo3" class="db" src='database.png' />
+            <img id="web1" class="server" src='server.png' />
+          </div>
+
+          <div id="status-bars" class="green">
+            <div id="status-bar-top">SYSTEMS ONLINE</div>
+            <div id="status-bar-left">SYSTEMS ONLINE</div>
+            <div id="status-bar-right">SYSTEMS ONLINE</div>
+            <div id="status-bar-bottom">SYSTEMS ONLINE</div>
+          </div>
+        </div>
+        <div id="info">
+          <div id="countdown">
+            Refreshing in 30seconds
+          </div>
+          <div class="alerts">
+            <div class="alert">
+              <div class="status critical">CRIT</div>
+              <div class="message">resque-01 is DOWN</div>
+            </div>
+            <div class="alert">
+              <div class="status warning">WARN</div>
+              <div class="message">mongo-db-01 replication lag is 54seconds<br />omg why don't you fix it already</div>
+            </div>
+            <div class="alert">
+              <div class="status warning">WARN</div>
+              <div class="message">mongo-db-02 replication lag is 192seconds</div>
+            </div>
+            <div class="alert">
+              <div class="status known">ACKN</div>
+              <div class="message">web-01 is at 90% load</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
