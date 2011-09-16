@@ -27,7 +27,7 @@ div#inner {
 
 div#map {
   height: 100%;
-  background-image: url('grid.png');
+  background-image: url('/img/grid.png');
   border-right-style: groove;
   border-right-width: thick;
   border-color: #272526;
