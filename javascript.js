@@ -15,6 +15,7 @@ function break_stuff() {
 
 $(function(){
     // break_stuff();
+    $('#tabs').tabs();
   
     $('#outer').css({'height':(($(window).height())-30)+'px'});
     $('#inner').css({'height':(($('#outer').height())-30)+'px'});
