@@ -5,6 +5,7 @@
     <link href="stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="map.css" media="screen" rel="stylesheet" type="text/css" />
     <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='jquery-ui-1.8.16.custom.min.js'></script>
     <script type='text/javascript' src='javascript.js'></script>
   </head>
   <body>
@@ -25,7 +26,15 @@
             <div id="status-bar-bottom">SYSTEMS ONLINE</div>
           </div>
         </div>
-        <div id="info">
+        <div id="info" class="ok">
+          <div id="tabs">
+            <ul>
+              <li><a href="tab1.html" title="tab-container">Nunc tincidunt</a></li>
+              <li><a href="tab2.html" title="tab-container">Proin dolor</a></li>
+              <li><a href="tab3.html" title="tab-container">Aenean lacinia</a></li>
+            </ul>
+            <div class="tab" id="tab-container"></div>
+          </div>
           <div id="countdown">
             Refreshing in 30seconds
           </div>
