@@ -15,7 +15,8 @@ function break_stuff() {
 
 $(function(){
     // break_stuff();
-    $('#tabs').tabs();
+
+    $('#tabs').tabs({ fx: { opacity: 'none' } }).tabs('rotate', 2000);
   
     $('#outer').css({'height':(($(window).height())-30)+'px'});
     $('#inner').css({'height':(($('#outer').height())-30)+'px'});
