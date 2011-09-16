@@ -3,34 +3,34 @@ html {
 }
 
 body {
-  background: #808080;
+  background: #787E7F;
   margin: 0;
   padding: 0;
   font-family: Arial;
 }
 
 div#outer {
-  background: grey;
+  background: #676767;
   margin: 10px;
   border-style: groove;
-  border-width: medium;
-  border-color: #C0C0C0;
+  border-width: thick;
+  border-color: #444343;
 }
 
 div#inner {
-  background: grey;
+  background: #676767;
   margin: 10px;
   border-style: groove;
-  border-width: medium;
-  border-color: #C0C0C0;
+  border-width: thick;
+  border-color: #232220;
 }
 
 div#map {
   height: 100%;
   background-image: url('grid.png');
   border-right-style: groove;
-  border-right-width: medium;
-  border-color: #C0C0C0;
+  border-right-width: thick;
+  border-color: #272526;
   overflow: hidden;
   position: relative;
   float: left;

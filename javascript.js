@@ -16,10 +16,10 @@ function break_stuff() {
 $(function(){
     // break_stuff();
   
-    $('#outer').css({'height':(($(window).height())-26)+'px'});
-    $('#inner').css({'height':(($('#outer').height())-26)+'px'});
+    $('#outer').css({'height':(($(window).height())-30)+'px'});
+    $('#inner').css({'height':(($('#outer').height())-30)+'px'});
     
-    $('#map').css({'width':((($('#inner').width() / 3) * 2)-3)+'px'});
+    $('#map').css({'width':((($('#inner').width() / 3) * 2) -5)+'px'});
     $('#info').css({'width':(($('#inner').width() / 3))+'px'});
     
     $('.alerts').css({'height':(($('#info').height()) - 105)+'px'});
@@ -39,10 +39,10 @@ $(function(){
     blink($('img.flash'))
 
     $(window).resize(function(){
-      $('#outer').css({'height':(($(window).height())-26)+'px'});
-      $('#inner').css({'height':(($('#outer').height())-26)+'px'});
+      $('#outer').css({'height':(($(window).height())-30)+'px'});
+      $('#inner').css({'height':(($('#outer').height())-30)+'px'});
       
-      $('#map').css({'width':((($('#inner').width() / 3) * 2)-3)+'px'});
+      $('#map').css({'width':((($('#inner').width() / 3) * 2) -5)+'px'});
       $('#info').css({'width':(($('#inner').width() / 3))+'px'});
       
       $('.alerts').css({'height':(($('#info').height()) - 105)+'px'});
