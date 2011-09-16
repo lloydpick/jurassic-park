@@ -42,13 +42,19 @@ div#info {
   width: 200px;
 }
 
+div#info.ok div#countdown, div.alerts {
+  display: none;
+}
+
 div#info div#countdown {
   margin: 10px;
-  background: #A0A0A0;
+  background: #6B6C69;
   height: 30px;
-  color: #707070;
+  color: #424242;
+  text-shadow: 0px 0px 3px #9EA4A3;
   border-style: groove;
-  border-color: #606060;
+  border-width: thick;
+  border-color: #B2AFAD;
   text-align: center;
   padding-top: 10px;
 }
