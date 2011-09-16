@@ -1,19 +1,20 @@
 require 'bundler/setup'
 require 'sinatra'
-require 'haml'
-require 'sass'
 
 # SETTINGS
 set :haml, :format => :html5
 
 # MAIN PAGE
-get '/' do haml :index end
+get '/' do haml :'haml/index' end
 
 # TABS
-get '/tab1' do haml :tab1 end
-get '/tab2' do haml :tab2 end
-get '/tab3' do haml :tab3 end
+get '/tab1' do haml :'haml/tab1' end
+get '/tab2' do haml :'haml/tab2' end
+get '/tab3' do haml :'haml/tab3' end
 
 # STYLESHEETS
-get '/stylesheet.css' do sass :stylesheet end
-get '/map.css' do sass :map end
+get '/application.css' do sass :'sass/application' end
+get '/map.css' do sass :'sass/map' end
+  
+# JS
+get "/application.js" do coffee :'coffee/application' end
