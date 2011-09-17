@@ -7,156 +7,162 @@ body
   padding: 0
   font-family: Arial
 
-div
-  &#outer
-    background: #676767
-    margin: 10px
-    border-style: groove
-    border-width: thick
-    border-color: #444343
-  &#inner
-    background: #676767
-    margin: 10px
-    border-style: groove
-    border-width: thick
-    border-color: #232220
-  &#map
-    height: 100%
-    background-image: url('/img/grid.png')
-    border-right-style: groove
-    border-right-width: thick
-    border-color: #272526
-    overflow: hidden
-    position: relative
-    float: left
-  &#info
-    height: 100%
-    float: left
-    width: 200px
-    &.ok div#countdown
+#outer
+  background: #676767
+  margin: 10px
+  border-style: groove
+  border-width: thick
+  border-color: #444343
+  
+#inner
+  background: #676767
+  margin: 10px
+  border-style: groove
+  border-width: thick
+  border-color: #232220
+  
+#map
+  height: 100%
+  background-image: url('/img/grid.png')
+  border-right-style: groove
+  border-right-width: thick
+  border-color: #272526
+  overflow: hidden
+  position: relative
+  float: left
+  
+#info
+  height: 100%
+  float: left
+  width: 200px
+  &.ok 
+    #countdown
       display: none
-  &.alerts
-    display: none
-  &#info div
-    &#countdown
-      margin: 10px
-      background: #6B6C69
-      height: 30px
-      color: #424242
-      text-shadow: 0px 0px 3px #9EA4A3
-      border-style: groove
-      border-width: thick
-      border-color: #B2AFAD
+    .alerts
+      display: none
+  &.bad
+    #tabs
+      display: none
+      
+#info
+  #countdown
+    margin: 10px
+    background: #6B6C69
+    height: 30px
+    color: #424242
+    text-shadow: 0px 0px 3px #9EA4A3
+    border-style: groove
+    border-width: thick
+    border-color: #B2AFAD
+    text-align: center
+    padding-top: 10px
+  .alerts
+    &.critical
+      background: #E00000
+    &.warning
+      background: yellow
+    &.known
+      background: blue
+      color: white
+    background: white
+    margin: 10px
+    padding: 10px
+    border-style: groove
+    border-width: medium
+    border-color: #C0C0C0
+    div.alert
+      clear: left
+      div
+        &.status
+          color: white
+          width: 60px
+          text-align: center
+          float: left
+          font-weight: bold
+          font-style: italic
+        &.critical
+          background: #E00000
+        &.warning
+          background: yellow
+          color: black
+        &.known
+          background: blue
+        &.message
+          color: black
+          text-align: left
+          float: left
+          margin-left: 10px
+          font-style: italic
+
+#map
+  #map-contents
+    padding: 20px
+    color: white
+    position: relative
+    z-index: 1
+    img
+      &.db
+        height: 64px
+        display: block
+        width: 64px
+        position: absolute
+      &.server
+        height: 76px
+        display: block
+        width: 64px
+        position: absolute
+  #status-bars
+    z-index: 10
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    border: 20px solid #44C658
+    color: white
+    font-size: 24px
+    font-weight: bold
+    font-style: italic
+    font-family: Arial
+    #status-bar-top
+      position: absolute
+      margin-left: 20%
+      margin-right: 20%
+      text-align: center
+      padding-bottom: 10px
+      font-size: 36px
+      width: 60%
+    #status-bar-left
+      position: absolute
+      font-size: 48px
+      width: 100%
+      -moz-transform: rotate(90deg)
+      text-align: center
+      top: 50%
+      z-index: 20
+    #status-bar-right
+      position: absolute
+      right: 0
+      font-size: 48px
+      text-align: center
+      -moz-transform: rotate(-90deg)
+      top: 50%
+      z-index: 20
+    #status-bar-bottom
+      position: absolute
+      margin-left: 20%
+      margin-right: 20%
       text-align: center
       padding-top: 10px
-    &.alerts
-      &.critical
+      font-size: 36px
+      width: 60%
+      bottom: 0
+    &.green
+      border-color: #44C658
+    &.red
+      border-color: #E00000
+      #status-bar-top, #status-bar-left, #status-bar-right, #status-bar-bottom
         background: #E00000
-      &.warning
-        background: yellow
-      &.known
-        background: blue
-        color: white
-      background: white
-      margin: 10px
-      padding: 10px
-      border-style: groove
-      border-width: medium
-      border-color: #C0C0C0
-      div.alert
-        clear: left
-        div
-          &.status
-            color: white
-            width: 60px
-            text-align: center
-            float: left
-            font-weight: bold
-            font-style: italic
-          &.critical
-            background: #E00000
-          &.warning
-            background: yellow
-            color: black
-          &.known
-            background: blue
-          &.message
-            color: black
-            text-align: left
-            float: left
-            margin-left: 10px
-            font-style: italic
-  &#map div
-    &#map-contents
-      padding: 20px
-      color: white
-      position: relative
-      z-index: 1
-      img
-        &.db
-          height: 64px
-          display: block
-          width: 64px
-          position: absolute
-        &.server
-          height: 76px
-          display: block
-          width: 64px
-          position: absolute
-    &#status-bars
-      z-index: 10
-      position: absolute
-      height: 100%
-      width: 100%
-      top: 0
-      left: 0
-      border: 20px solid #44C658
-      color: white
-      font-size: 24px
-      font-weight: bold
-      font-style: italic
-      font-family: Arial
-      div
-        &#status-bar-top
-          position: absolute
-          margin-left: 20%
-          margin-right: 20%
-          text-align: center
-          padding-bottom: 10px
-          font-size: 36px
-          width: 60%
-        &#status-bar-left
-          position: absolute
-          font-size: 48px
-          width: 100%
-          -moz-transform: rotate(90deg)
-          text-align: center
-          top: 50%
-          z-index: 20
-        &#status-bar-right
-          position: absolute
-          right: 0
-          font-size: 48px
-          text-align: center
-          -moz-transform: rotate(-90deg)
-          top: 50%
-          z-index: 20
-        &#status-bar-bottom
-          position: absolute
-          margin-left: 20%
-          margin-right: 20%
-          text-align: center
-          padding-top: 10px
-          font-size: 36px
-          width: 60%
-          bottom: 0
-      &.green
-        border-color: #44C658
-      &.red
-        border-color: #E00000
-        div
-          &#status-bar-top, &#status-bar-left, &#status-bar-right, &#status-bar-bottom
-            background: #E00000
-      &.green > div
-        &#status-bar-top, &#status-bar-left, &#status-bar-right, &#status-bar-bottom
-          background: #44C658
+    &.green
+      #status-bar-top, #status-bar-left, #status-bar-right, #status-bar-bottom
+        background: #44C658
