@@ -24,6 +24,10 @@ resize = ->
   $(".alerts .message").css width: (($(".alert").width()) - 100) + "px"
   $(".alert").css width: (($(".alerts").width()) - 20) + "px"
   
+  $("#tab-container").css 
+    width: ($("#info").width() - 35) + "px"
+    height: (($("#info").height()) - 70) + "px"
+  
   $("#status-bars").css 
     width: (($("#map").width()) - 40) + "px"
     height: (($("#map").height()) - 40) + "px"
@@ -34,7 +38,7 @@ resize = ->
   $("#status-bar-right").css width: (($("#status-bars").height()) + 60) + "px"
   
 $ ->
-  break_stuff()
+  # break_stuff()
   resize()
   $("#tabs").tabs(fx: opacity: 'toggle', duration: 'slow').tabs "rotate", 12000
   
