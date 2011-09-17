@@ -3,14 +3,14 @@ blink = (div) ->
     blink div
     
 break_stuff = ->
-  $("#status-bars").removeClass("green").addClass "red"
+  $("#status-bars").removeClass("green").addClass("red")
   $("img#mongo1").addClass "flash"
+  $("#info").removeClass("ok").addClass("bad")
   text = "SYSTEM FAILURE!"
   $("#status-bar-top").text text
   $("#status-bar-left").text text
   $("#status-bar-right").text text
   $("#status-bar-bottom").text text
-  
   
 resize = ->
   $("#outer").css height: (($(window).height()) - 30) + "px"
@@ -34,9 +34,9 @@ resize = ->
   $("#status-bar-right").css width: (($("#status-bars").height()) + 60) + "px"
   
 $ ->
-  # break_stuff()
+  break_stuff()
   resize()
-  $("#tabs").tabs(fx: opacity: "none").tabs "rotate", 2000
+  $("#tabs").tabs(fx: opacity: 'toggle', duration: 'slow').tabs "rotate", 12000
   
   $(window).resize ->
     resize()
