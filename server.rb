@@ -10,7 +10,6 @@ get '/' do haml :'haml/index' end
 # TABS
 get '/tab1' do haml :'haml/tab1' end
 get '/tab2' do haml :'haml/tab2' end
-get '/tab3' do haml :'haml/tab3' end
 
 # STYLESHEETS
 get '/application.css' do sass :'sass/application' end
