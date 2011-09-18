@@ -13,6 +13,7 @@ The idea is the get the screens right for use, then provide some functionality t
 
 * Ruby 1.9.2
 * Bundler
+* Firefox
 
 
 ## Installation/Running
