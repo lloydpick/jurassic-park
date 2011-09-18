@@ -4,7 +4,8 @@ blink = (div) ->
     
 break_stuff = ->
   $("#status-bars").removeClass("green").addClass("red")
-  $("img#mongo1").addClass "flash"
+  blink "img#mongo1"
+  blink "#status-bars"
   $("#info").removeClass("ok").addClass("bad")
   text = "SYSTEM FAILURE!"
   $("#status-bar-top").text text
